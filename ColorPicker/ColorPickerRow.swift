@@ -8,8 +8,7 @@
 
 import UIKit
 import Eureka
-import UIColor_Hex_Swift
-
+import HEXColor
 
 public final class ColorPickerCell : Cell<UIColor>, CellType, UICollectionViewDelegate, UICollectionViewDataSource {
     
