@@ -12,10 +12,10 @@ import HEXColor
 
 public final class ColorPickerCell : Cell<UIColor>, CellType, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var titleLabel : UILabel
-    var swatchView : ColorSwatchView
-    var colorsView : UICollectionView
-    var isCircular = false {
+    public var titleLabel : UILabel
+    public var swatchView : ColorSwatchView
+    public var colorsView : UICollectionView
+    public var isCircular = false {
         didSet {
             swatchView.isCircular = isCircular
             if oldValue != isCircular {
@@ -23,7 +23,7 @@ public final class ColorPickerCell : Cell<UIColor>, CellType, UICollectionViewDe
             }
         }
     }
-    var showsPaletteNames = true {
+    public var showsPaletteNames = true {
         didSet {
             if oldValue != showsPaletteNames {
                 (colorsView.collectionViewLayout as? UICollectionViewFlowLayout)?.headerReferenceSize = showsPaletteNames ? CGSize(width: 20.0, height: 20.0) : CGSize(width: 0.0, height: 0.0)
